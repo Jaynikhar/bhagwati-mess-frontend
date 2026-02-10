@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://your-backend.onrender.com/api",
+  baseURL: "https://bhagwati-mess.onrender.com",
 });
 
 API.interceptors.request.use((req) => {
