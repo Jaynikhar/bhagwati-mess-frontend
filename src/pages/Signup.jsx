@@ -129,13 +129,15 @@ const Signup = () => {
       setLoading(true);
 
       // await axios.post("/auth/signup", {
-      await API.post("/auth/signup", {
+      const res = await API.post("/auth/signup", {
         username: form.username,
         email: form.email,
         password: form.password,
         address: form.address,
         
       });
+      localStorage.setItem("token", res.data.token);
+      login(res.data);
 
       
 
