@@ -10,8 +10,7 @@ const NotificationBell = () => {
 
   useEffect(() => {
     const fetchNotes = async () => {
-      const res = await axios.get(
-        "http://localhost:5000/api/notifications",
+      const res = await axios.get("/notifications",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setNotes(res.data);

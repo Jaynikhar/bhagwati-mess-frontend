@@ -3,6 +3,7 @@ import MapPicker from "../components/MapPicker";
 import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import API from "../api/axios";
 
 // export default function Signup() {
 //   const [location, setLocation] = useState(null);
@@ -127,7 +128,8 @@ const Signup = () => {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:5000/api/auth/signup", {
+      // await axios.post("http://localhost:5000/api/auth/signup", {
+      await API.post("/auth/signup", {
         username: form.username,
         email: form.email,
         password: form.password,

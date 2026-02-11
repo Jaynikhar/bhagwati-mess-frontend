@@ -72,8 +72,7 @@ const OwnerDashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(
-        "http://localhost:5000/api/owner/stats",
+      const res = await API.get("/owner/stats",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setStats(res.data);
