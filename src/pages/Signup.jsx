@@ -5,6 +5,8 @@ import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api/axios";
 
+import { useAuth } from "../context/AuthContext";
+
 // export default function Signup() {
 //   const [location, setLocation] = useState(null);
 //   return (
@@ -88,6 +90,8 @@ import API from "../api/axios";
 
 const Signup = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
+
   const [form, setForm] = useState({
     username: "",
     email: "",
@@ -128,19 +132,17 @@ const Signup = () => {
     try {
       setLoading(true);
 
-      // await axios.post("/auth/signup", {
+      // const res = await axios.post("/auth/signup", {
       const res = await API.post("/auth/signup", {
         username: form.username,
         email: form.email,
         password: form.password,
         address: form.address,
         
-      });
+      });      
       localStorage.setItem("token", res.data.token);
-      login(res.data);
 
-      
-
+      // login(res.data);
       alert("Signup successful ✅");
       
       navigate("/profile"); // redirect after signup
