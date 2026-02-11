@@ -128,8 +128,8 @@ const Signup = () => {
     try {
       setLoading(true);
 
-      // await axios.post("http://localhost:5000/api/auth/signup", {
-      await API.post("/auth/signup", {
+      await axios.post("/auth/signup", {
+      // await API.post("/auth/signup", {
         username: form.username,
         email: form.email,
         password: form.password,
