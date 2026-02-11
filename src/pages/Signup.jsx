@@ -145,7 +145,7 @@ const Signup = () => {
       // login(res.data);
       alert("Signup successful ✅");
       
-      window.location.href = "/login"; // redirect after signup
+      window.location.href = "/"; // redirect after signup
       
     } catch (err) {
       alert("Signup failed");
