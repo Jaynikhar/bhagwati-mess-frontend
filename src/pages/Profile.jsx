@@ -47,7 +47,7 @@ const Profile = () => {
   if (!user)
     return (
       <div className="min-h-screen flex items-center justify-center text-xl font-semibold">
-        Please Login Again..! 
+        Profile Loading..... 
       </div>
     );
 
