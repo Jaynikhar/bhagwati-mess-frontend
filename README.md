@@ -73,6 +73,7 @@ client/
 │ ├── App.jsx
 │ └── main.jsx
 │── package.json
+│── vercel.json
 
 
 ---
