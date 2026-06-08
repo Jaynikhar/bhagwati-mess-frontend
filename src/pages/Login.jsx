@@ -4,34 +4,7 @@ import API from "../api/axios";
 import { useAuth, AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-// export default function Login() {
-//   const [form, setForm] = useState({ username: "", password: "" });
-//   const { login } = useContext(AuthContext);
-//   const submit = async () => {
-//     const res = await API.post("/auth/login", form);
-//     login(res.data.token);
-//     alert("Login successful");
-//   };
 
-//   return (
-//     <div className="p-10 max-w-md mx-auto">
-//       <input
-//         placeholder="Username"
-//         className="input"
-//         onChange={(e) => setForm({ ...form, username: e.target.value })}
-//       />
-//       <input
-//         type="password"
-//         placeholder="Password"
-//         className="input mt-4"
-//         onChange={(e) => setForm({ ...form, password: e.target.value })}
-//       />
-//       <button onClick={submit} className="btn mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-xl">
-//         Login
-//       </button>
-//     </div>
-//   );
-// }
 const Login = () => {
   const {login } = useAuth();
   const navigate = useNavigate();
