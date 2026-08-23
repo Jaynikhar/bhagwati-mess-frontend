@@ -4,31 +4,7 @@ import React from "react";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
 
-// function LocationMarker({ setPosition }) {
-//   const [position, setPos] = useState(null);
 
-//   useMapEvents({
-//     click(e) {
-//       setPos(e.latlng);
-//       setPosition(e.latlng);
-//     },
-//   });
-
-//   return position ? <Marker position={position} /> : null;
-// }
-
-// export default function MapPicker({ setPosition }) {
-//   return (
-//     <MapContainer
-//       center={[22.57, 88.36]}
-//       zoom={13}
-//       className="h-64 w-full rounded-xl"
-//     >
-//       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-//       <LocationMarker setPosition={setPosition} />
-//     </MapContainer>
-//   );
-// }
 
 /* Default location → Indramani Nagar, Gwalior */
 const DEFAULT_POSITION = [26.2183, 78.1828];
